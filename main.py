@@ -32,7 +32,7 @@ def process_queries(queries):
             for j in range(len(contacts)):
                 if contacts[j].number == cur_query.number:
                     contacts.pop(j)
-                    break
+                    break 
         else:
             response = 'not found'
             for contact in contacts:
