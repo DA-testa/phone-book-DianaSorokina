@@ -9,7 +9,7 @@ class Query:
 
 def read_queries():
     n = int(input())
-    return [Query(input().split()) for i in range(n)]
+    return [Query(input().strip().split()) for i in range(n)]
 
 def write_responses(result):
     print('\n'.join(result))
@@ -17,7 +17,7 @@ def write_responses(result):
 def process_queries(queries):
     result = []
     # Keep list of all existing (i.e. not deleted yet) contacts.
-    contacts = []
+    contacts = {}
     for cur_query in queries:
         if cur_query.type == 'add':
             # if we already have contact with such number,
