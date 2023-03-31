@@ -22,7 +22,7 @@ def process_queries(queries):
         if cur_query.type == 'add':
             # if we already have contact with such number,
             # we should rewrite contact's name
-            contacts[.pop(cur_query.number] = cur_query.name
+            contacts[cur_query.number] = cur_query.name
         elif cur_query.type == 'del':
             contacts.pop(cur_query.number, None)
         else:
